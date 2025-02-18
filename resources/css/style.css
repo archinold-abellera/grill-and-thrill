@@ -1,0 +1,372 @@
+/* Media Queries */
+/* Mobile: S=320px, M=375px, L=425px */
+/* Tablet: 768px */
+/* Laptop: 1024px, L=1440px */
+/* Desktop: */
+
+/* Set base font styles */
+body {
+    font-family: 'Inter-Regular', system-ui, sans-serif;
+    line-height: 1;
+}
+
+/* Enables better text alignment by allowing punctuation to "hang" outside the text block */
+blockquote, p, li {
+    hanging-punctuation: first last;
+}
+
+/* Layout */
+.container {
+    width: 100dvw;
+    height: 100dvh;
+
+    display: grid;
+    grid-template-rows: 60px auto;
+    grid-template-areas:
+        'header'
+        'content';
+}
+
+header { grid-area: header; }
+.main-content { grid-area: content; }
+
+.center {
+    text-align: center;
+}
+
+.restaurant-name {
+    font-family: 'Oswald';
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 2.5rem
+}
+
+
+/* ********** <header> ********** */
+
+header {
+    border-bottom: 1px solid #c6c1c1;
+
+    display: flex;
+
+    background-color: white;
+}
+
+.header-brand {
+    max-width: 260px;
+    min-width: 260px;
+
+    overflow: hidden;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+}
+
+.menu-search {
+    padding: 0 5px;
+
+    flex: 1;
+}
+
+.menu-list {
+    padding: 0 10px 0 5px;
+}
+
+.menu-list nav ul {
+    display: flex;
+}
+
+nav li {
+    padding: 0 .5rem;
+}
+
+nav a {
+    padding: .5rem .5rem;
+
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav svg {
+    fill: black;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 425px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+    
+    .menu-list {
+        flex: 1;
+    }
+ 
+    .menu-list nav ul {
+        justify-content: space-between;
+    }
+
+    nav svg {
+        width: 2rem;
+    }
+
+}
+
+
+/* ********** .main-content ********** */
+
+.main-content {
+    /* background-color: #c6c1c1; */
+
+    overflow: auto;         /* show scrollbar */
+}
+
+
+/* ********** #home-section ********** */
+
+#home-section {
+    height: 50rem;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.banner {
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#home-section .content {
+    flex: 1;
+}
+
+#home-section h1 {
+    font-family: 'Oswald';
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+#home-section h2 {
+    font-family: 'PlayfairDisplay-Italic';
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 425px) {
+
+    #home-section {
+        height: 30rem;
+    }
+
+    #home-section h1 {
+        font-family: 'Oswald';
+        font-size: 3rem;
+    }
+
+    #home-section h2 {
+        font-family: 'PlayfairDisplay-Italic';
+        font-size: 1.75rem;
+    }
+
+}
+
+
+/* ********** #about-us-section ********** */
+
+#about-us-section {
+    padding: 3rem;
+}
+
+#about-us-section .content {
+}
+
+.about-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about-us-content .column {
+    padding: 1rem;
+    flex: 1;
+}
+
+.about-us-content p {
+    text-align: justify;
+    line-height: 2;
+}
+
+@media only screen and (max-width: 425px) {
+
+    .about-us-content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
+
+
+/* ********** #our-drive-section ********** */
+
+#our-drive-section {
+    padding: 3rem;
+
+    background: linear-gradient(to right, #d32f2f, #ff6f00);
+    color: white;
+}
+
+#our-drive-section .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    
+    justify-content: space-evenly;
+}
+
+.our-drive-card {
+    max-width: 30rem;
+    min-width: 30rem;
+    height: 20rem;
+    
+    /* border: 1px solid black; */
+    border-radius: .625rem;
+
+    text-align: center;
+}
+
+.our-drive-card-content {
+    padding: 1rem;
+}
+
+.our-drive-card-content h2 {
+    margin: 1rem;
+}
+
+.our-drive-card-content p {
+    margin-bottom: 1rem;
+
+    text-align: justify;
+    line-height: 2;
+}
+
+@media only screen and (max-width: 425px) {
+
+    .our-drive-card {
+        max-width: 18.75rem;
+        min-width: 18.75rem;
+    }
+
+}
+
+
+/* ********** #our-team-section ********** */
+
+#our-team-section {
+    padding: 3rem;
+}
+
+#our-team-section .content {
+}
+
+#our-team-section h2 {
+    margin-bottom: 2rem;
+}
+
+.team-gallery {
+    display: flex;
+    justify-content: center;    /* Center images */
+    flex-wrap: wrap;            /* Allows images to move to the next row */
+}
+
+.team-gallery img {
+    max-width: 18.75rem;
+    height: 15.625rem;
+
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 425px) {
+
+    .team-gallery {
+        gap: .625rem;               /* Space between images */
+    }
+
+    .team-gallery img {
+        border-radius: .3125rem;
+    }
+
+    .hide-on-small {
+        display: none;
+    }
+}
+
+
+/* ********** <footer> ********** */
+
+footer {
+    padding: 3rem 3rem 0 3rem;
+
+    background: linear-gradient(to top, #6d4c41, #ff6f00);
+    /* background: linear-gradient(to bottom, #2C2C2C, #000000); */
+}
+
+footer h2 {
+    margin-bottom: 1.5rem;
+}
+
+footer .content ul li {
+    padding-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+footer .content svg {
+    fill: black;
+}
+
+.social-us {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.copyright {
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 425px) {
+
+    footer .content {
+        margin: 2rem 0;
+    }    
+    
+}

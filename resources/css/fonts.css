@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-VariableFont_wght.woff2') format('woff2'),
+        url('../fonts/Oswald-VariableFont_wght.woff') format('woff'),
+        url('../fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 700;   /* Variable font supports all weights between 200-700 */
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    src: url('../fonts/PlayfairDisplay-VariableFont_wght.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-VariableFont_wght.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;   /* Supports all weights */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('../fonts/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Italic-VariableFont_wght.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;   /* Supports all weights */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../fonts/Inter-VariableFont_opsz\,wght.woff2') format('woff2'),
+        url('../fonts/Inter-VariableFont_opsz\,wght.woff') format('woff'),
+        url('../fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;   /* Supports all weights */
+    font-style: normal;
+    font-variation-settings: "opsz" 8, "wght" 400;  /* Default optical size & weight */
+}
+
+@font-face {
+    font-family: 'Inter-Italic';
+    src: url('../fonts/Inter-Italic-VariableFont_opsz\,wght.woff2') format('woff2'),
+        url('../fonts/Inter-Italic-VariableFont_opsz\,wght.woff') format('woff'),
+        url('../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;   /* Supports all weights */
+    font-style: italic;
+    font-variation-settings: "opsz" 8, "wght" 400;  /* Default optical size & weight */
+}
